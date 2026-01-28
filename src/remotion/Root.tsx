@@ -5,6 +5,7 @@ import { BackpropagationSkill } from "./compositions/BackpropagationSkill";
 import { ActivationFunctionsSkill } from "./compositions/ActivationFunctionsSkill";
 import { LossFunctionsSkill } from "./compositions/LossFunctionsSkill";
 import { ConceptExplainerSkill } from "./compositions/ConceptExplainerSkill";
+import { TheGeneralStorePromo } from "./compositions/TheGeneralStorePromo";
 import { skillsRegistry } from "./skills/registry";
 
 export const RemotionRoot: React.FC = () => {
@@ -81,6 +82,21 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           concept: "neural-networks",
           style: "visual",
+        }}
+      />
+
+      {/* The General Store Promo Video */}
+      <Composition
+        id="TheGeneralStorePromo"
+        component={TheGeneralStorePromo}
+        durationInFrames={540}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          showClients: true,
+          showServices: true,
+          accentColor: "#E11D48",
         }}
       />
 
